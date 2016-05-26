@@ -1,0 +1,10 @@
+1.从github上clone代码比较简单，直接参考廖老师的教程即可。
+2.要把自己的代码同步到github的仓库里稍微麻烦，这里提供一种方法：
+  1）新建一个文件夹，在其中调出git bash，使用$ git init命令，表示将这个文件夹初始化为一个git本地仓库，此步骤完成后文件夹里会有.git子文件夹。
+  2）然后使用命令git remote add origin https://github.com/xx/xxx.git这里的xx和xxx分别表示github的用户名和该用户下的某个仓库名，origin可看成本地仓库和github仓库的连接名。
+  3）从其他文件夹里拷贝希望传到github仓库上的文件或文件夹（一般是文件夹），使用$ git add xxx命令，xxx代表文件名或者文件夹名。
+  4）使用$ git commit -m"xxx"命令完成新文件（夹）到本地仓库的commit过程，该步骤完成后，新文件（夹）已经完全同步到了本地仓库，但是还没有同步到github仓库。
+  5）使用$ push (-u) origin master将本地仓库的新文件夹同步到github仓库，-u参数在第一次同步时才需要。该步骤正常的话，在github的xxx仓库下就能看到新文件夹了！
+  以上五步是从零开始push，如果有一个本地文件夹已经初始化好了，也关联好了github仓库，就只从第三步开始即可。
+  
+  
